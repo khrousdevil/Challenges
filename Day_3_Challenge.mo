@@ -124,8 +124,14 @@ actor {
 
     //Challenge 10
     func contains<A>(xs : [A], a: A, f : (A,A) -> Bool) : Bool {
-        
-    }
+        for (i in xs.vals()){
+            var bool = false;
+            if (i == a){
+                bool := f(a,xs[i]);
+            }
+        };
+        bool;
+    };
     
 };
 
