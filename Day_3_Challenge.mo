@@ -97,14 +97,10 @@ actor {
 
 
     //Challenge 7
-    //let f = func (n : Nat) : Nat {
-    //    return(n**2);
-    //};
-
-    //public func sum_of_array(array : [Nat]) : async Nat {
-    //    let n = array.size();
-    //    return(Array.map<Nat,Nat>(array, f))[n-1];
-    //};
+     public func sum_of_array(array : [Nat]) : async Nat {
+   
+        return(Array.foldRight<Nat,Nat>(array, 0 , Nat.add));
+    };
 
         //Challenge 8
     let k = func (n : Nat) : Nat {
